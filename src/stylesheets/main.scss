@@ -687,10 +687,11 @@ width:260px;
    font-size: 26px;
    color: rgb(105, 105, 105);
    margin-top: 40px;
+   margin-bottom: 24px;
  }
  &--text {
    margin-top: 1vw;
-   padding-bottom: 2.8vw;
+   padding-bottom: 20px;
    color: rgb(105, 105, 105);
  }
 }
@@ -727,6 +728,7 @@ width:260px;
    height: 160px;
  @include mq(s) {
   width: 94%;
+  height:120px;
  }
  @include mq(m) {
    width: 200px;
@@ -737,6 +739,9 @@ width:260px;
 .caseStudy__textGroup {
  text-align: start;
  &--textLarge {
+    @include mq(s) {
+   font-size: 12px;
+  }
    color: rgb(70, 70, 70);
    margin: 10px 0;
    line-height: 20px;
