@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="">
+    <title>furniture</title>
+
+
+    <!-- font awesome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- swiper CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+</head>
+
+<body class="body">
+
+
+    <!-- ローディング画面 -->
+    <div id="loading">
+
+        <h2 class="aaa">KOJIMA Furniture</h2>
+    </div>
+
+    <div class="white"></div>
+
+    <header class="header__menu">
+        <div class="header__wrapper">
+
+            <div class="headerLogo">
+                <a href="" class="headerLogo__Link">
+                    <img src="<%= require('../images/top_k_logo.png') %>" alt="logo" class="headerLogo__Link--img" loading="lazy">
+                </a>
+            </div>
+
+
+            <nav class="mainNav">
+
+                <ul class="mainNav__wrapper">
+                    <li class="mainNav__wrapper--item">
+                        <a href="" class="mainNav__wrapper--link">News</a>
+                    </li>
+                    <li class="mainNav__wrapper--item">
+                        <a href="" class="mainNav__wrapper--link">Services</a>
+                    </li>
+                    <li class="mainNav__wrapper--item">
+                        <a href="" class="mainNav__wrapper--link">Products</a>
+                    </li>
+                    <li class="mainNav__wrapper--item">
+                        <a href="" class="mainNav__wrapper--link">Special Contents</a>
+                    </li>
+                    <li class="mainNav__wrapper--item">
+                        <a href="" class="mainNav__wrapper--link">Case Study</a>
+                    </li>
+                    <li class="mainNav__wrapper--item">
+                        <a href="" class="mainNav__wrapper--link">Brands</a>
+                    </li>
+                    <li class="mainNav__wrapper--item">
+                        <a href="" class="mainNav__wrapper--link square">Contact</a>
+                    </li>
+                </ul>
+
+
+
+                <!-- Hamburger Menu -->
+                <div class="hamburger">
+                    <header class="header">
+                        <nav id="js-nav" class="nav">
+                            <ul class="list">
+                                <li class="list__item">
+                                    <a href="" class="list__item--link">
+                                        Top
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="" class="list__item--link">
+                                        News
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="" class="list__item--link">
+                                        Services
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="" class="list__item--link">
+                                        Products
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="" class="list__item--link">
+                                        Special Contents
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="" class="list__item--link">
+                                        Case Study
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="" class="list__item--link">
+                                        Brands
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="" class="list__item--link">
+                                        Contact
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </nav>
+
+                        <button id="js-hamburger" class="hamburger" type="button">
+                            <span id="js-top-line" class="top-line"></span>
+                            <span id="js-center-line" class="center-line"></span>
+                            <span id="js-bottom-line" class="bottom-line"></span>
+                        </button>
+
+                    </header>
+                </div>
+            </nav>
+            <!-- .mainNav -->
+        </div>
+        <!-- .headerwrapper -->
+
+    </header>
+
+
+    <!-- slider----------------------------- -->
+    <section class="mainVis">
+
+        <!-- Slider main container -->
+        <div class="swiper IOAPI__img">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <li class="swiper-slide">
+
+                    <img src="<%= require('../images/1.jpg') %>" alt="logo" class="mainVis__wrapper--hero" loading="lazy">
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="" class="mainVis__wrapper--link">
+                        <img src="<%= require('../images/2.jpg') %>" alt="logo" class="mainVis__wrapper--hero" loading="lazy">
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="" class="mainVis__wrapper--link">
+                        <img src="<%= require('../images/3.jpg') %>" alt="logo" class="mainVis__wrapper--hero" loading="lazy"> </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="" class="mainVis__wrapper--link">
+                        <img src="<%= require('../images/4.jpg') %>" alt="logo" class="mainVis__wrapper--hero" loading="lazy"> </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="" class="mainVis__wrapper--link">
+                        <img src="<%= require('../images/5.jpg') %>" alt="logo" class="mainVis__wrapper--hero" loading="lazy"> </a>
+                </li>
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle-left"
+                    class="svg-inline--fa fa-circle-left" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                        d="M0 256c0 141.4 114.6 256 256 256s256-114.6 256-256c0-141.4-114.6-256-256-256S0 114.6 0 256zM246.1 129.2C252.1 131.7 256 137.5 256 144v64h96c17.67 0 32 14.33 32 32v32c0 17.67-14.33 32-32 32h-96v64c0 6.469-3.891 12.31-9.875 14.78c-5.984 2.484-12.86 1.109-17.44-3.469l-112-112c-6.248-6.248-6.248-16.38 0-22.62l112-112C233.3 128.1 240.1 126.7 246.1 129.2z">
+                    </path>
+                </svg>
+            </div>
+            <div class="swiper-button-next">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle-arrow-right"
+                    class="svg-inline--fa fa-circle-arrow-right" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                        d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z">
+                    </path>
+                </svg>
+            </div>
+
+            <!-- <div class="swiper-button-prev swiper-button-black"></div> 矢印を黒に変える  -->
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- main contents ---------------------------->
+    <main class="main">
+        <div class="mainArea">
+
+            <!-- News -->
+            <section class="news">
+
+                <div class="news__wrapper">
+                    <div class="news__title">News</div>
+
+                    <a href="" class="news__link">
+                        <div class="news__contents">
+                            <time class="news__contents--date">"2022.09.13"</time>
+                            <div class="news__contents--text">
+                                <strong>Case Study「Richmond IKEA」</strong>を
+                                <strong>Up</strong>いたしました。
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="news__wrapper">
+                    <div class="news__title"></div>
+
+                    <a href="" class="news__link">
+                        <div class="news__contents">
+                            <time class="news__contents--date">"2022.08.09"</time>
+                            <div class="news__contents--text">
+                                <strong>Case Study「The Furniture」 </strong>を
+                                <strong>Up</strong>いたしました。
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="news__wrapper">
+                    <div class="news__title"></div>
+
+                    <a href="" class="news__link">
+                        <div class="news__contents">
+                            <time class="news__contents--date">"2022.05.10"</time>
+                            <div class="news__contents--text">
+                                <strong>Case Study「HOTEL Furniture Shop 難波店」</strong>を
+                                <strong>Up</strong>いたしました。
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+
+
+
+            <!-- Products -------------------------->
+            <section class="products">
+                <h2 class="products__title">Products</h2>
+                <p class="products__title--text">KOJIMAオリジナルのコントラクト向けオリジナル家具をご紹介いたします</p>
+
+                <div class="products__contents">
+                    <div class="products__contents--item">
+                        <a href="" class="products__contents--link">
+
+
+                            <img src="<%= require('../images/6.jpg') %>" alt="logo"
+                                class="products__contents--img IOAPI__img" loading="lazy">
+
+                            <p class="products__contents--text">Sofas</p>
+                        </a>
+                    </div>
+
+
+                    <div class="products__contents--item">
+                        <a href="" class="products__contents--link">
+                            <img src="<%= require('../images/7.jpg') %>" alt="logo"
+                                class="products__contents--img IOAPI__img" loading="lazy">
+
+                            <p class="products__contents--text">Chairs</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+            <!-- Special Contents -->
+            <section class="special__contents">
+                <h2 class="special__contents--title"> Special Contents</h2>
+                <p class="special__contents--text">施主様のインタビューや開発秘話など、スペシャルコンテンツをお届けいたします</p>
+
+                <div class="special__contents--wrapper">
+
+                    <div class="special__contents--item">
+                        <a href="" class="special__contents--link">
+
+
+                            <img src="<%= require('../images/8.jpg') %>" alt="logo"
+                                class="special__contents--img IOAPI__img" loading="lazy">
+
+                            <div class="special__textGroup">
+                                <p class="special__textGroup--textSmall">INTERVIEW</p>
+                                <h3 class="special__textGroup--textLarge">Kasamatsu KASAMA 2/2</h3>
+                                <h3 class="special__textGroup--textSmall">笠松 笠間 後編</h3>
+                                <time class="special__textGroup--textSmall">2021.10.17 upDate</time>
+                            </div>
+
+                        </a>
+                    </div>
+
+
+                    <div class="special__contents--item">
+                        <a href="" class="special__contents--link">
+                            <!-- <img src="/assets/img/special_thumb_M_etowa2-528x480.jpg" alt=""
+                                class=""> -->
+
+                            <img src="<%= require('../images/9.jpg') %>" alt="logo"
+                                class="special__contents--img IOAPI__img" loading="lazy">
+
+                            <div class="special__textGroup">
+                                <p class="special__textGroup--textSmall">INTERVIEW</p>
+                                <h3 class="special__textGroup--textLarge">Ishi Hide 1/2</h3>
+                                <h3 class="special__textGroup--textSmall">石井 秀 前編</h3>
+                                <time class="special__textGroup--textSmall">2020.10.17 upDate</time>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="special__contents--item">
+                        <a href="" class="special__contents--link">
+                            <!-- <img src="/assets/img/special_aoyama_main-528x480.jpg" alt=""
+                                class="special__contents--img IOAPI__img"> -->
+
+                            <img src="<%= require('../images/10.jpg') %>" alt="logo"
+                                class="special__contents--img IOAPI__img" loading="lazy">
+
+                            <div class="special__textGroup">
+                                <p class="special__textGroup--textSmall">FEATURE</p>
+                                <h3 class="special__textGroup--textLarge">AOYAMA</h3>
+                                <h3 class="special__textGroup--textSmall">AOYAMA</h3>
+                                <time class="special__textGroup--textSmall">2020.10.17 upDate</time>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- スマホ時のみ表示 -->
+                    <div class="special__contents--item SP">
+                        <a href="" class="special__contents--link">
+                            <!-- <img src="/assets/img/special_thumb_M_etowa2-528x480.jpg" alt=""
+                                class="special__contents--img IOAPI__img"> -->
+
+                            <img src="<%= require('../images/7.jpg') %>" alt="logo"
+                                class="special__contents--img IOAPI__img" loading="lazy">
+
+
+                            <div class="special__textGroup">
+                                <p class="special__textGroup--textSmall">FEATURE</p>
+                                <h3 class="special__textGroup--textLarge">AOYAMA</h3>
+                                <h3 class="special__textGroup--textSmall">AOYAMA</h3>
+                                <time class=special__textGroup--textSmall>2020.10.17 upDate</time>
+                            </div>
+                        </a>
+                    </div>
+
+
+
+                </div>
+                <!-- .special__contents--wrapper -->
+
+            </section>
+
+
+
+
+
+            <!-- Case Study  ------------------------------->
+            <section class="caseStudy">
+                <h2 class="caseStudy__title">Case Study</h2>
+                <p class="caseStudy--text">KOJIMA法人事業部の施工事例のご紹介です</p>
+
+
+                <div class="caseStudy__wrapper">
+
+                    <div class="caseStudy__contents">
+                        <a href="" class="caseStudy__contents--link">
+                            <!-- <img src="/assets/img/アイコン.jpg" alt="" class=""> -->
+
+                            <img src="<%= require('../images/11.jpg') %>" alt="logo"
+                                class="caseStudy__contents--img IOAPI__img" loading="lazy">
+
+                            <div class="caseStudy__textGroup">
+                                <h3 class="caseStudy__textGroup--textLarge">Richmond Hotels <br>Tatsukawa</h3>
+                                <h3 class="caseStudy__textGroup--textSmall">リッチモンド 立川</h3>
+                            </div>
+
+                        </a>
+                    </div>
+
+                    <div class="caseStudy__contents">
+                        <a href="" class="caseStudy__contents--link">
+                            <!-- <img src="/assets/img/title.jpg" alt="" class="caseStudy__contents--img IOAPI__img"> -->
+
+                            <img src="<%= require('../images/12.jpg') %>" alt="logo"
+                                class="caseStudy__contents--img IOAPI__img" loading="lazy">
+
+                            <div class="caseStudy__textGroup">
+                                <h3 class="caseStudy__textGroup--textLarge"> The Parkhabio Izumigaoka </h3>
+                                <h3 class="caseStudy__textGroup--textSmall"> ザ・パーク 泉が丘</h3>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="caseStudy__contents">
+                        <a href="" class="caseStudy__contents--link">
+                            <!-- <img src="/assets/img/main_0420_akao_03.jpg" alt=""
+                                class="caseStudy__contents--img IOAPI__img"> -->
+
+
+                            <img src="<%= require('../images/13.jpg') %>" alt="logo"
+                                class="caseStudy__contents--img IOAPI__img" loading="lazy">
+
+                            <div class="caseStudy__textGroup">
+                                <h3 class="caseStudy__textGroup--textLarge">WORK×ation Site </h3>
+                                <h3 class="caseStudy__textGroup--textSmall">ワ―ケーションサイト</h3>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="caseStudy__contents">
+                        <a href="" class="caseStudy__contents--link">
+                            <!-- <img src="/assets/img/01-1.jpg" alt="" class="caseStudy__contents--img IOAPI__img"> -->
+
+
+                            <img src="<%= require('../images/14.jpg') %>" alt="logo"
+                                class="caseStudy__contents--img IOAPI__img" loading="lazy">
+
+                            <div class="caseStudy__textGroup">
+                                <h3 class="caseStudy__textGroup--textLarge">Workshop TRAD HAKATA</h3>
+                                <h3 class="caseStudy__textGroup--textSmall">ワークショップトラッド博多</h3>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="caseStudy__contents">
+                        <a href="" class="caseStudy__contents--link">
+                            <!-- <img src="/assets/img/01.jpg" alt="" class="caseStudy__contents--img IOAPI__img"> -->
+
+
+                            <img src="<%= require('../images/15.jpg') %>" alt="logo"
+                                class="caseStudy__contents--img IOAPI__img" loading="lazy">
+
+                            <div class="caseStudy__textGroup">
+                                <h3 class="caseStudy__textGroup--textLarge"> STUDIO PASTIS & BASIL <br>スタジオ バジル/セージ</h3>
+                                <h3 class="caseStudy__textGroup--textSmall">スタジオパティス＆バジル スタジオ バジル/セージ</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- スマホ時のみ表示 -->
+                    <div class="caseStudy__contents sp">
+                        <a href="" class="caseStudy__contents--link">
+                            <!-- <img src="/assets/img/01.jpg" alt="" class="caseStudy__contents--img IOAPI__img"> -->
+
+
+                            <img src="<%= require('../images/16.jpg') %>" alt="logo"
+                                class="caseStudy__contents--img IOAPI__img" loading="lazy">
+
+                            <div class="caseStudy__textGroup">
+                                <h3 class="caseStudy__textGroup--textLarge"> STUDIO PASTIS & BASIL スタジオ バジル/セージ</h3>
+                                <h3 class="caseStudy__textGroup--textSmall">スタジオパティス＆バジル スタジオ バジル/セージ</h3>
+                            </div>
+                        </a>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+                <!-- .caseStudy__wrapper -->
+
+            </section>
+
+
+
+        </div>
+        <!-- .mainArea -->
+    </main>
+    <!-- .main -->
+
+
+
+
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="footerArea">
+
+            <!-- <div class="footerTop">
+                <ul class="footerTop__wrapper">
+                    <li class="footerTop__wrapper--item">
+                        <a href="" class="footerTop__wrapper--link">
+                            企業情報
+                        </a>
+                    </li>
+                    <li class="footerTop__wrapper--item">
+                        <a href="" class="footerTop__wrapper--link">
+                            お問い合わせ
+                        </a>
+                    </li>
+                    <li class="footerTop__wrapper--item">
+                        <a href="" class="footerTop__wrapper--link">
+                            プライバシーポリシー
+                        </a>
+                    </li>
+                </ul>
+            </div> -->
+
+
+
+            <div class="footerCenter">
+                <div class="footerCenter__Squre">
+                    <a href="" class="footerCenter--link">
+
+
+
+
+                        <img src="<%= require('../images/top_k_logo.png') %>" alt="logo" class="footerCenter--img" loading="lazy">
+                    </a>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <div class="footerBottom">
+                <ul class="footerBottom__wrapper">
+
+                    <li class="footerBottom__wrapper--item">
+                        <a href="" class="footerBottom__wrapper--link">
+                            <!-- <img src="../images/top_k_logo.png" alt="" class="footerBottom__wrapper--img"> -->
+                        </a>
+                    </li>
+
+
+                    <li class="footerBottom__wrapper--item">
+                        <ul class="footerBottom__wrapper--imgWrapper">
+                            <li class="footerBottom__wrapper--innerItem">
+                                <a href="" class="footerBottom__wrapper--innerLink">
+                                    <i class="fa-brands fa-instagram footerBottom__wrapper--innerImg"></i>
+                                </a>
+                            </li>
+                            <li class="footerBottom__wrapper--innerItem">
+                                <a href="" class="footerBottom__wrapper--innerLink">
+                                    <i class="fa-brands fa-facebook-f footerBottom__wrapper--innerImg"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <!-- .footerBottom__wrapper -->
+            </div>
+            <!-- .footerBottom -->
+
+
+
+            <div class="fixed-button">
+                <a id="adding" style="display: block;">
+                    <!-- <img src="/assets/img/" alt=""> -->
+
+                    <img src="<%= require('../images/ico_gototop.svg') %>" alt="logo" class="" loading="lazy">
+
+                </a>
+            </div>
+
+            <script>
+
+
+            </script>
+
+
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <!-- swiper-->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="../javascripts/swiper.min.js"></script>
+
+</body>
+
+</html>
