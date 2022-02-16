@@ -1,0 +1,170 @@
+/* Val---------------------------------------------- */
+
+$ff: "YakuHanJPs","Lato","Custom Yu Gothic","游ゴシック","Yu Gothic",YuGothic,Hiragino Sans,"Meiryo",Hiragino Kaku Gothic ProN,sans-serif
+
+//  "UD Shin Go Regular", "Lucida Grande", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, sans-serif;
+// $mincho: 游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN","Hiragino Mincho Pro",HGS明朝E,メイリオ,Meiryo,serif
+;
+$din-bi: 'din-bi';
+$din-cb: 'din-cb';
+$din-bl: 'din-bl';
+$din-b: 'din-b';
+$din-m: 'din-m';
+$din-cm: 'din-cm';
+$ud-m: "UD Shin Go Medium";
+$ud-db: "UD Shin Go DemiBold";
+$ud-b: "UD Shin Go Bold";
+
+/*カラーテーマ-------------------------------------------*/
+$base:#000;
+$secondary_base : #ff0012;
+$accent : #ffee00;
+
+/* Mixin---------------------------------------------- */
+
+// $w-s: 480;
+// $w-m: 785;
+// $w-l: 1080;
+// $w-xl: 1280;
+
+
+// $breakpoints: (
+//   's': 'screen and (max-width:'+ $w-s +'px)',
+//   'm': 'screen and (max-width:'+ $w-m +'px)',
+//   'l': 'screen and (max-width:'+ $w-l +'px)',
+//   'xl': 'screen and (max-width:'+ $w-xl +'px)',
+// ) !default;
+
+$breakpoints: (
+  's': 'screen and (max-width:480px)',
+  'm': 'screen and (max-width: 767px) and (min-width:480px)',
+  'l': 'screen and (max-width: 1080px) and (min-width: 768px)',
+  // 'l': 'screen and (min-width: 768px)',
+  'xl': '(min-width: 1081px) ',
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+// 例
+// @include mq(l) { // 引数を個別に指定
+//     color: red;
+//   }
+
+
+/* Common---------------------------------------------- */
+// common
+body{
+  font-family: $ff;
+  font-size: 14px;
+  // font-feature-settings: "palt";
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: $base;
+
+  @include mq(xl) {
+      color: $base;
+  }
+  @include mq(l) {
+      color: $base;
+  }
+  @include mq(m) {
+    font-size: to-vw(13,375);
+  }
+  @include mq(s) {
+  }
+}
+
+a{
+  text-decoration: none;
+  color: $base;
+  &:hover{
+    opacity: .8;
+    transition: all .6s ease;
+  }
+}
+
+img{
+  max-width: 100%;
+}
+li{
+  list-style: none;
+}
+h1,h2,h3,h4,h5{
+  font-weight: normal;
+}
+input[type="submit"],
+input[type="button"] {
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+    &::-webkit-search-decoration {
+      display: none;
+    }
+    &::focus {
+      outline-offset: -2px;
+    }
+}
+input[type="text"],input[type="email"],select,textarea{
+  padding:.25em .5em;
+  font-size: 15px;
+  width: 100%;
+  @include mq(m){
+    font-size: 16px;
+    // transform: scale(0.9);
+  }
+}
+select{
+  font-family: system-ui;
+}
+textarea{
+  @include mq(m){
+    min-height: 30vw;
+    width: 100%;
+  }
+}
+.is{
+  &-pc{
+    @include mq(m) {
+      display: none;
+    }
+  }
+  &-sp{
+    display: none;
+    @include mq(m) {
+      display: block;
+    }
+  }
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+%inner{
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+  @include mq(l) {
+    width: 98%;
+  }
+}
+.inner{
+  max-width: 1000px;
+  @extend %inner;
+  &-wide{
+    max-width: 1150px;
+    @extend %inner;
+  }
+  &-narrow{
+    max-width: 820px;
+    @extend %inner;
+  }
+}

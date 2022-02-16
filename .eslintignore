@@ -1,0 +1,6 @@
+src/javascripts/*.js
+dist/javascripts/*.js
+webpack.config.js
+src/javascripts/React/*.jsx
+src/javascripts/TypeScript/*.ts
+src/javascripts/TypeScript/*.tsx

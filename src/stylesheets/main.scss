@@ -1,0 +1,984 @@
+@import "_reset.scss";
+@import "_setting.scss";
+
+html {
+  scrollbar-width: none;
+}
+body {
+  width: calc(100vw - calc(100vw - 100%)); //横スクロール防ぐ
+}
+//Header-----------------------------------
+header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 34px 0;
+  z-index: 1000;
+  @include mq(s) {
+  }
+  @include mq(m) {
+  }
+  @include mq(l) {
+  }
+}
+
+.header__menu.change {
+  @include mq(s) {
+  }
+  @include mq(m) {
+  }
+}
+
+.header__wrapper {
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: -15px;
+  @include mq(s) {
+  }
+  @include mq(m) {
+  }
+  @include mq(l) {
+  }
+}
+.headerLogo {
+  // background-color: red;
+  &__Link {
+    color: rgb(243, 243, 243);
+    text-decoration: none;
+    &--img {
+      transform: translateY(50%); //タテ中央寄せ
+      display: block;
+      width: 100px;
+      height: 50px;
+      aspect-ratio: auto 180 / 30;
+      margin-left: 1vw;
+      @include mq(s) {
+        margin-left: 4vw;
+      }
+      @include mq(m) {
+      }
+      @include mq(l) {
+        transform: translateY(0%); //タテ中央寄せ
+        margin-left: 2vw;
+      }
+    }
+  }
+}
+
+.mainNav__wrapper {
+  display: flex;
+  &--item {
+    margin: 2.3vw 1.5vw 1.5vw 1.5vw;
+  }
+  &--link {
+    font-size: 12px;
+  }
+}
+
+.mainNav__wrapper--link.square {
+  background-color: rgb(247, 246, 246);
+  padding: 15px 25px;
+}
+
+.mainNav__wrapper {
+  @include mq(s) {
+    display: none;
+  }
+  @include mq(m) {
+    display: none;
+  }
+  @include mq(l) {
+    display: none;
+    text-align: center;
+  }
+}
+
+// Hamburger Menu-----------------------
+.hamburger {
+  display: none;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: -10px;
+  @include mq(s) {
+    display: block;
+    position: absolute;
+    top: 62px;
+    right: 32px;
+    width: 32px;
+    height: 32px;
+  }
+  @include mq(m) {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 52px;
+    width: 32px;
+    height: 32px;
+  }
+  @include mq(l) {
+    width: 32px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 52px;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: start;
+  height: inherit;
+  &__item {
+    margin: 15px 0;
+    margin-left: 30px;
+    font-size: 20px;
+    &--link {
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 5px;
+    }
+  }
+}
+.list__item:first-child .list__item--link {
+  border-bottom: 2px black solid;
+}
+
+button {
+  background: none;
+  border: none;
+  appearance: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #ffffff;
+}
+
+.nav {
+  background: rgb(250, 250, 250);
+  // background-color: rgb(7, 107, 7);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  // z-index:100000;
+  transition: transform 0.7s, opacity 1s;
+  transform: translateX(100%);
+  opacity: 0; // 非表示にする
+  color: #080808;
+  @include mq(s) {
+    width: 260px;
+  }
+  @include mq(m) {
+  }
+  @include mq(l) {
+  }
+}
+
+.nav.show {
+  transform: translateX(0%);
+  opacity: 1; // 表示する
+}
+
+.white.active {
+  opacity: 0.5;
+  filter: blur(4px);
+  // background-color:rgb(255, 255, 255);
+  height: 100vh;
+}
+
+.hamburger span {
+  position: absolute;
+  left: 0;
+  background: #0a0a0a;
+  width: inherit;
+  height: 2px;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+// To create a burger icon
+.top-line {
+  top: 1.5px;
+}
+.center-line {
+  top: 13px;
+}
+.bottom-line {
+  bottom: 6px;
+}
+
+// To change the burger icon to X
+.top-line.active {
+  transform: translateY(12px) rotate(45deg);
+}
+.center-line.active {
+  opacity: 0;
+}
+.bottom-line.active {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+// Slider-------------------------------------
+.mainVis {
+  background-color: white;
+  padding-top: 140px;
+  width: calc(100vw - calc(100vw - 100%));
+  padding-bottom: 3.5vw;
+  // display:none;
+  @include mq(s) {
+  }
+  @include mq(m) {
+  }
+  @include mq(l) {
+    padding-top: 100px;
+  }
+}
+.mainVis__wrapper--hero {
+  height: 400px;
+  padding-bottom: 40px;
+  box-sizing: content-box;
+  @include mq(s) {
+    height: 80vw;
+  }
+  @include mq(m) {
+    height: 550px;
+  }
+  @include mq(l) {
+    width: 100%;
+    height: 500px;
+  }
+  @include mq(xl) {
+    width: 100%;
+    height: 500px;
+  }
+}
+
+// paginationのボタン色を変更
+.swiper-pagination-bullet-active {
+  background-color: rgb(165, 165, 165);
+  color: black;
+}
+
+// デフォルトの両サイドの矢印ボタンを消す
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: none !important;
+}
+// 左ボタン
+.swiper-button-prev {
+  .svg-inline--fa.fa-circle-left {
+    font-size: 60px;
+    color: black;
+    width: 60px;
+    height: 40px;
+  }
+  @include mq(s) {
+    display: none !important;
+  }
+  @include mq(m) {
+    display: none !important;
+  }
+  @include mq(l) {
+    display: none !important;
+  }
+}
+
+// 右ボタン
+.swiper-button-next {
+  .svg-inline--fa.fa-circle-arrow-right {
+    font-size: 60px;
+    color: black;
+    width: 60px;
+    height: 40px;
+  }
+  @include mq(s) {
+    display: none !important;
+  }
+  @include mq(m) {
+    display: none !important;
+  }
+  @include mq(l) {
+    display: none !important;
+  }
+}
+
+// main------------------------
+.main {
+  padding: 60px 20px 120px 20px;
+  width: calc(100vw - calc(100vw - 100%));
+  @include mq(s) {
+    padding: 10vw 5vw 15vw 5vw;
+  }
+  @include mq(m) {
+    padding: 10vw 5vw 15vw 5vw;
+  }
+  @include mq(l) {
+    padding: 10vw 5vw 15vw 5vw;
+  }
+}
+
+.mainArea {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.news__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  @include mq(s) {
+    display: block;
+  }
+  @include mq(m) {
+    display: block;
+  }
+  @include mq(l) {
+  }
+}
+
+.news__title {
+  color: rgb(73, 73, 73);
+  font-size: 26px;
+  width: 16vw;
+}
+
+// Change only first  .news__title
+.news__wrapper:first-child .news__title {
+  @include mq(s) {
+    margin-bottom: 7vw;
+  }
+  @include mq(m) {
+    margin-bottom: 7vw;
+  }
+  @include mq(l) {
+  }
+}
+
+.news__contents {
+  display: flex;
+  @include mq(s) {
+    // max-width:300px;
+  }
+  @include mq(m) {
+  }
+  @include mq(l) {
+  }
+  &--date {
+    color: black;
+    width: 10vw;
+    @include mq(s) {
+      font-size: 12px;
+      margin-right: 20px;
+    }
+    @include mq(m) {
+      font-size: 13px;
+      margin-right: 6vw;
+    }
+
+    @include mq(l) {
+      // font-size:12px;
+      margin-right: 6vw;
+    }
+  }
+  &--text {
+    color: rgb(92, 91, 91);
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    strong {
+      font-weight: 700;
+    }
+    @include mq(s) {
+      font-size: 12px;
+      margin-left: 30px;
+    }
+    @include mq(m) {
+      font-size: 13px;
+    }
+
+    @include mq(l) {
+      // font-size:12px;
+    }
+  }
+}
+.news__link:hover {
+  opacity: 0.3;
+  transition: all 0.4s;
+}
+
+//Products---------------------
+.products {
+  padding-top: 7vw;
+  text-align: center;
+  &__title {
+    font-size: 26px;
+    color: rgb(77, 77, 77);
+    margin-bottom: 1.5vw;
+    @include mq(s) {
+      font-size: 22px;
+    }
+    @include mq(m) {
+      font-size: 26px;
+      margin-top: 30px;
+    }
+    @include mq(l) {
+    }
+    &--text {
+      margin-top: 1vw;
+      padding-bottom: 2vw;
+      color: rgb(77, 77, 77);
+      margin-bottom: 1.5vw;
+      letter-spacing: 1.2;
+      @include mq(s) {
+        width: 210px;
+        margin: auto;
+        font-size: 12px;
+        line-height: 1.5;
+        text-align: center;
+        margin-top: 5vw;
+        margin-bottom: 6vw;
+      }
+      @include mq(m) {
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+      }
+      @include mq(l) {
+      }
+    }
+  }
+}
+.products__contents {
+  display: flex;
+  @include mq(s) {
+    display: block;
+  }
+  @include mq(m) {
+  }
+  @include mq(l) {
+  }
+}
+.products__contents--text {
+  transform: translateY(-200%);
+  font-size: 26px;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  @include mq(s) {
+  }
+  @include mq(m) {
+    transform: translateY(-400%);
+    font-size: 22px;
+    font-weight: 300;
+  }
+  @include mq(l) {
+    transform: translateY(-500%);
+  }
+}
+.products__contents--item {
+  @include mq(s) {
+    margin-bottom: 20px;
+  }
+  @include mq(m) {
+  }
+  @include mq(l) {
+  }
+}
+
+.products__contents--item:first-child {
+  margin-right: 1vw;
+  // width:500px;
+}
+
+.products__contents--item:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.products__contents--img {
+  height: 300px;
+  width: 540px;
+  @include mq(s) {
+    height: 184px;
+    width: 90%;
+  }
+  @include mq(m) {
+    height: 200px;
+  }
+}
+
+//Special Contents-------------------
+.special__contents {
+  padding-top: 6vw;
+  padding-bottom: 3vw;
+  text-align: center;
+  &--title {
+    font-size: 26px;
+    color: rgb(77, 77, 77);
+    margin-bottom: 1.5vw;
+    margin-top: 40px;
+    @include mq(s) {
+      font-size: 22px;
+    }
+    @include mq(m) {
+      font-size: 26px;
+    }
+    @include mq(l) {
+    }
+  }
+  &--text {
+    margin-top: 1vw;
+    padding-bottom: 2vw;
+    color: rgb(105, 105, 105);
+    font-size: 12px;
+    margin-bottom: 1.5vw;
+    @include mq(s) {
+      width: 260px;
+      margin: auto;
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: center;
+      margin-top: 5vw;
+      margin-bottom: 6vw;
+    }
+    @include mq(m) {
+      margin-top: 3vw;
+      margin-bottom: 3vw;
+    }
+    @include mq(l) {
+    }
+  }
+}
+.special__contents--wrapper {
+  display: flex;
+  margin-top: 1.3vw;
+  @include mq(s) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @include mq(m) {
+  }
+  @include mq(l) {
+  }
+}
+
+.special__contents--item {
+  margin-right: 1vw;
+  @include mq(s) {
+    width: 46.5%;
+    margin-bottom: 40px;
+    margin-left: 1vw;
+  }
+  @include mq(m) {
+    display: block;
+  }
+  @include mq(l) {
+    display: block;
+  }
+}
+.special__contents--img {
+  height: 230px;
+  // width:350px;
+  // display: block;
+  @include mq(s) {
+    width: 95%;
+    height: 150px;
+  }
+  @include mq(m) {
+    // width:170px;
+    // height: 180px;
+  }
+}
+
+.special__textGroup {
+  // background-color: red;
+  text-align: start;
+  &--textSmall {
+    font-size: 11px;
+    margin: 10px 0;
+    color: rgb(68, 68, 68);
+  }
+  &--textLarge {
+    font-size: 13px;
+    margin: 10px 0;
+    color: rgb(68, 68, 68);
+  }
+}
+
+.special__contents--item:last-child {
+  margin-right: 0;
+}
+.special__contents--item:hover {
+  background: rgba(250, 250, 255, 0.3);
+}
+
+//スマホ時のみ表示
+.special__contents--item.SP {
+  display: none;
+  @include mq(s) {
+    display: block;
+  }
+}
+
+//Case Study ---------------------------
+.caseStudy {
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  text-align: center;
+  &__title {
+    font-size: 26px;
+    color: rgb(105, 105, 105);
+    margin-top: 40px;
+    margin-bottom: 24px;
+  }
+  &--text {
+    margin-top: 1vw;
+    padding-bottom: 20px;
+    color: rgb(105, 105, 105);
+  }
+}
+
+.caseStudy__wrapper {
+  display: flex;
+  @include mq(s) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @include mq(m) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.caseStudy__contents {
+  margin-right: 1vw;
+  @include mq(s) {
+    width: 32%;
+    margin-bottom: 8vw;
+  }
+  @include mq(m) {
+    width: 32%;
+    margin-bottom: 8vw;
+  }
+  @include mq(l) {
+  }
+}
+
+.caseStudy__contents--img {
+  width: 200px;
+  height: 160px;
+  @include mq(s) {
+    width: 94%;
+    height: 120px;
+  }
+  @include mq(m) {
+    width: 200px;
+    height: 160px;
+  }
+}
+
+.caseStudy__textGroup {
+  text-align: start;
+  &--textLarge {
+    @include mq(s) {
+      font-size: 12px;
+    }
+    color: rgb(70, 70, 70);
+    margin: 10px 0;
+    line-height: 20px;
+  }
+  &--textSmall {
+    font-size: 11px;
+  }
+}
+
+.caseStudy__contents:last-child {
+  margin-right: 0;
+}
+.caseStudy__contents:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.5s;
+}
+
+//スマホ時のみ表示
+.caseStudy__contents.sp {
+  display: none;
+  @include mq(s) {
+    display: block;
+  }
+  @include mq(m) {
+    display: block;
+  }
+}
+
+// footer--------------------------------
+footer {
+  width: calc(100vw - calc(100vw - 100%));
+  background-color: rgb(250, 250, 250);
+  padding-bottom: 100px;
+  padding-top: 2.3vw;
+  @include mq(s) {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  @include mq(m) {
+    padding: 8vw 5vw 10vw 5vw;
+  }
+  @include mq(l) {
+    padding: 4vw 5vw 10vw 5vw;
+  }
+}
+
+.footerArea {
+  max-width: 1100px;
+  margin: auto;
+  @include mq(s) {
+  }
+  @include mq(m) {
+  }
+  @include mq(l) {
+  }
+}
+
+.footerTop {
+  @include mq(s) {
+    // transform: translateX(5%);
+    width: 340px;
+    margin-bottom: 40px;
+  }
+  @include mq(m) {
+    transform: translateX(30%);
+    width: 360px;
+    margin-bottom: 40px;
+  }
+  @include mq(l) {
+  }
+  &__wrapper {
+    display: flex;
+    @include mq(s) {
+    }
+    @include mq(m) {
+    }
+    @include mq(l) {
+    }
+    &--item {
+      margin-right: 2.5vw;
+      @include mq(s) {
+        margin-right: 9vw;
+        font-size: 12px;
+      }
+      @include mq(m) {
+        margin-right: 7.5vw;
+        font-size: 12px;
+      }
+      @include mq(l) {
+      }
+    }
+    &--link {
+      font-size: 12px;
+      position: relative;
+      width: 100px;
+    }
+  }
+}
+// 一番最後のみ空白なし
+.footerTop__wrapper--item:last-child {
+  margin-right: 0;
+}
+
+.footerCenter {
+  display: flex; 
+  justify-content: flex-end;
+  @include mq(s) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+  }
+  @include mq(m) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+  }
+  @include mq(l) {
+  }
+  &__Squre {
+    text-align: center;
+    padding: 10px 100px;
+    background-color: white;
+    border: 1px solid rgba(167, 167, 167, 0.4);
+    margin-top:40px;
+  }
+  &--img {
+    width: 60px;
+    display: block;
+  }
+}
+
+.footerBottom__wrapper {
+  display: flex;
+  @include mq(s) {
+    display: flex;
+    justify-content: center;
+  }
+  @include mq(m) {
+    display: flex;
+    justify-content: center;
+  }
+  @include mq(l) {
+  }
+  &--item {
+    margin-right: 2.5vw;
+  }
+  &--img {
+    width: 60px;
+    display: block;
+  }
+}
+
+.footerBottom__wrapper {
+  &--imgWrapper {
+    display: flex;
+    margin-top: 0.1vw;
+    opacity: 0.6;
+  }
+  &--innerItem {
+    width: 2vw;
+  }
+  &--innerLink {
+    display: block;
+  }
+  &--innerImg {
+    font-size: 18px; 
+    color: rgb(151, 149, 149);
+  }
+}
+
+.footerBottom__wrapper--innerItem:last-child {
+  margin-left: 20px;
+}
+
+// Hover
+.footerTop__wrapper--item:hover {
+  opacity: 0.6;
+  transition: all 0.4s ease;
+}
+
+.footerBottom__wrapper--img:hover {
+  opacity: 0.6;
+  transition: all 0.4s ease;
+}
+
+.footerBottom__wrapper--innerImg:hover {
+  opacity: 1;
+  color: black;
+  transition: all 0.4s ease;
+}
+
+.link-pagetop {
+  display: block;
+  position: fixed;
+  right: 20px;
+  bottom: -90px;
+  display: none;
+  font-size: 45px;
+  transition: all 0.8s ease;
+  transform: translateY(-100px);
+  cursor: pointer;
+  @include mq(s) {
+  }
+  @include mq(m) {
+    position: relative;
+    top: -40px;
+    left: 680px;
+  }
+  @include mq(l) {
+  }
+}
+
+.fixed-button {
+  display: block;
+  // background-color: black;
+  width: 10px;
+  @include mq(s) {
+    display: none;
+  }
+  @include mq(m) {
+    display: none;
+  }
+}
+
+// Intersection observation API
+.IOAPI__img {
+  position: relative;
+  left: -8px;
+  opacity: 0;
+  transition: left 1s, opacity 1s;
+}
+
+.IOAPI__img.appear {
+  left: 0;
+  opacity: 1;
+}
+
+/* ローディング画面 */
+#loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 3s;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.aaa {
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+  overflow: hidden;
+  display: block;
+  position: fixed;
+  top: 40vh;
+  left: 45vw;
+  transform: translateX(-50%);
+  z-index: 9999;
+  animation: LeftToRight 3s infinite ease-in-out;
+  @include mq(s) {
+    font-size: 25px;
+    left: 40vw;
+  }
+  @include mq(m) {
+    font-size: 28px;
+  }
+  @include mq(l) {
+    font-size: 30px;
+  }
+}
+/* ローディングアニメーション */
+@keyframes LeftToRight {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+// 追加されてアニメーションが消える
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}

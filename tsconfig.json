@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "module": "es6",
+    "target": "es5",
+    // "jsx": "react",
+    "noImplicitAny": false,//何も型の定義がない際にanyとして扱う
+    "jsx": "react-jsx"//tsxを使えるようにする
+  }
+}
