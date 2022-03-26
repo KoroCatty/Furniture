@@ -45,7 +45,6 @@ header {
   }
 }
 .headerLogo {
-  // background-color: red;
   &__Link {
     color: rgb(243, 243, 243);
     text-decoration: none;
@@ -170,13 +169,11 @@ button {
 
 .nav {
   background: rgb(250, 250, 250);
-  // background-color: rgb(7, 107, 7);
   position: fixed;
   top: 0;
   right: 0;
   width: 300px;
   height: 100vh;
-  // z-index:100000;
   transition: transform 0.7s, opacity 1s;
   transform: translateX(100%);
   opacity: 0; // 非表示にする
@@ -198,7 +195,6 @@ button {
 .white.active {
   opacity: 0.5;
   filter: blur(4px);
-  // background-color:rgb(255, 255, 255);
   height: 100vh;
 }
 
@@ -239,7 +235,6 @@ button {
   padding-top: 140px;
   width: calc(100vw - calc(100vw - 100%));
   padding-bottom: 3.5vw;
-  // display:none;
   @include mq(s) {
   }
   @include mq(m) {
@@ -390,7 +385,6 @@ button {
     }
 
     @include mq(l) {
-      // font-size:12px;
       margin-right: 6vw;
     }
   }
@@ -410,7 +404,6 @@ button {
     }
 
     @include mq(l) {
-      // font-size:12px;
     }
   }
 }
@@ -498,7 +491,6 @@ button {
 
 .products__contents--item:first-child {
   margin-right: 1vw;
-  // width:500px;
 }
 
 .products__contents--item:hover {
@@ -595,13 +587,10 @@ button {
     height: 150px;
   }
   @include mq(m) {
-    // width:170px;
-    // height: 180px;
   }
 }
 
 .special__textGroup {
-  // background-color: red;
   text-align: start;
   &--textSmall {
     font-size: 11px;
@@ -753,7 +742,6 @@ footer {
 
 .footerTop {
   @include mq(s) {
-    // transform: translateX(5%);
     width: 340px;
     margin-bottom: 40px;
   }
@@ -908,7 +896,6 @@ footer {
 
 .fixed-button {
   display: block;
-  // background-color: black;
   width: 10px;
   @include mq(s) {
     display: none;
@@ -943,7 +930,7 @@ footer {
   z-index: 9999;
 }
 
-.aaa {
+.loadingTitle {
   font-size: 40px;
   color: rgb(0, 0, 0);
   overflow: hidden;

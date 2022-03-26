@@ -10,7 +10,7 @@ module.exports = {
   mode: 'development',
   // mode: 'production',
   performance: {
-    hints: false,  
+    hints: false,
     // maxEntrypointSize: 512000,
     // maxAssetSize: 512000
   },
@@ -25,7 +25,7 @@ module.exports = {
     // filename: 'javascripts/main.js',
     filename: 'javascripts/[name]-[contenthash].js',
     publicPath: '/', 
-    // publicPath: '/Furniture', 
+    // publicPath: '/Furniture',
   },
 
   optimization: {
@@ -49,7 +49,7 @@ module.exports = {
         extractComments: false,
         terserOptions: {
           compress: {
-            drop_console: true, 
+            drop_console: true,
           },
         },
       }),
@@ -95,10 +95,10 @@ module.exports = {
         test: /\.(css|sass|scss)/,
         use: [
           MiniCssExtractPlugin.loader,
-         
+
           'css-loader',
 
-         
+
           {
             loader: 'postcss-loader',
             options: {
@@ -147,7 +147,7 @@ module.exports = {
       filename: 'index.html',
       chunks: ['main'],
     }),
- 
+
     new ESLintPlugin(),
 
     // new CleanWebpackPlugin(),

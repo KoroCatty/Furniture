@@ -92,13 +92,11 @@ const emergeLine = {
   threshold: 0.2,
   // rootMargin: '0px 0px -100px'
 }
-
 const observer = new IntersectionObserver(arg, emergeLine);
 
 targets.forEach(target => {
   observer.observe(target);
 });
-
 
 // スクロールでheader__menuの高さを変更
 const boxes = document.querySelector('.header__menu');
@@ -116,13 +114,11 @@ const bottomLine = document.getElementById("js-bottom-line");
 const nav = document.getElementById("js-nav");
 const entire = document.querySelector(".white");
 
-
 hamburgerBtn.addEventListener("click", () => {
   topLine.classList.toggle("active");
   centerLine.classList.toggle("active");
   bottomLine.classList.toggle("active");
   nav.classList.toggle("show");
-
   entire.classList.toggle("active");
 });
 
@@ -137,7 +133,6 @@ close.addEventListener("click", () => {
   nav.classList.toggle("show");
   entire.classList.toggle("active");
 });
-
 
 
 // animation for texts
